@@ -290,7 +290,7 @@ escolha_2 = int(input("Escolha o número do acompanhamento que deseja: ")) - 1
 if 0 <= escolha_2 < len(acompanhamentos_cha):
     acomp_escolhido = acompanhamentos_cha[escolha_2]
     speak(f"Você escolheu: {acomp_escolhido}")
-    print(f"\nVocê escolheu: {acomp_escolhido}")
+    print(f"\nSeu acompanhamento: {acomp_escolhido}")
 else:
     speak("Escolha inválida, sem acompanhamentos.")
     print("Escolha inválida, sem acompanhamentos.")
@@ -401,6 +401,51 @@ if comentarios:
     print("\nComentários dos usuários:")
     for comentario in comentarios:
         print(f"- {comentario}")
+
+
+# Função para carregar o histórico de chá de um arquivo
+def carregar_historico():
+    if os.path.exists("historico_cha.json"):
+        with open("historico_cha.json", "r") as file:
+            return json.load(file)
+    return []
+
+# Função para salvar o histórico de chá em um arquivo
+def salvar_historico(historico):
+    with open("historico_cha.json", "w") as file:
+        json.dump(historico, file, indent=4)
+
+# Carregar histórico existente
+historico = carregar_historico()
+
+# Adicionar preparação atual ao histórico
+preparacao_atual = {
+    "cha_escolhido": cha_escolhido,
+    "acomp_escolhido": acomp_escolhido,
+    "modo_preparo": cha,
+    "curiosidade": curiosidades_cha.get(cha_escolhido, "Nenhuma curiosidade disponível para este chá.")
+}
+historico.append(preparacao_atual)
+
+# Salvar o histórico atualizado
+salvar_historico(historico)
+
+# Função para mostrar o histórico de chá
+def mostrar_historico():
+    historico = carregar_historico()
+    if historico:
+        print("\nHistórico de Preparações de Chá:")
+        for i, preparacao in enumerate(historico, 1):
+            print(f"\nPreparação {i}:")
+            print(f"Chá Escolhido: {preparacao['cha_escolhido']}")
+            print(f"Acompanhamento Escolhido: {preparacao['acomp_escolhido']}")
+            print(f"Modo de Preparo: {' '.join(preparacao['modo_preparo'])}")
+            print(f"Curiosidade: {preparacao['curiosidade']}")
+    else:
+        print("Nenhum histórico de preparações de chá disponível.")
+
+# Mostrar o histórico de chá ao final da preparação atual
+mostrar_historico()
 
 
 
