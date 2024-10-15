@@ -1,5 +1,4 @@
 import time as tm
-import pyttsx3
 import os
 import json
 import threading
@@ -39,6 +38,25 @@ def listen():
         except sr.RequestError:
             print("Could not request results; check your network connection.")
             return ""
+        
+# Funções para carregar e salvar o histórico de chá
+historico = []
+
+def salvar_historico(preparacao):
+    historico.append(preparacao)
+
+def mostrar_historico():
+    if historico:
+        print("\nHistórico de Preparações de Chá:")
+        for i, preparacao in enumerate(historico, 1):
+            print(f"\nPreparação {i}:")
+            print(f"Chá Escolhido: {preparacao['cha_escolhido']}")
+            print(f"Acompanhamento Escolhido: {preparacao['acomp_escolhido']}")
+            print(f"Modo de Preparo: {' '.join(preparacao['modo_preparo'])}")
+            print(f"Curiosidade: {preparacao['curiosidade']}")
+    else:
+        print("Nenhum histórico de preparações de chá disponível.")
+
 
 
 # Lista ampliada de tipos de chá
@@ -403,52 +421,6 @@ if comentarios:
         print(f"- {comentario}")
 
 
-# Função para carregar o histórico de chá de um arquivo
-def carregar_historico():
-    if os.path.exists("historico_cha.json"):
-        with open("historico_cha.json", "r") as file:
-            return json.load(file)
-    return []
-
-# Função para salvar o histórico de chá em um arquivo
-def salvar_historico(historico):
-    with open("historico_cha.json", "w") as file:
-        json.dump(historico, file, indent=4)
-
-# Carregar histórico existente
-historico = carregar_historico()
-
-# Adicionar preparação atual ao histórico
-preparacao_atual = {
-    "cha_escolhido": cha_escolhido,
-    "acomp_escolhido": acomp_escolhido,
-    "modo_preparo": cha,
-    "curiosidade": curiosidades_cha.get(cha_escolhido, "Nenhuma curiosidade disponível para este chá.")
-}
-historico.append(preparacao_atual)
-
-# Salvar o histórico atualizado
-salvar_historico(historico)
-
-# Função para mostrar o histórico de chá
-def mostrar_historico():
-    historico = carregar_historico()
-    if historico:
-        print("\nHistórico de Preparações de Chá:")
-        for i, preparacao in enumerate(historico, 1):
-            print(f"\nPreparação {i}:")
-            print(f"Chá Escolhido: {preparacao['cha_escolhido']}")
-            print(f"Acompanhamento Escolhido: {preparacao['acomp_escolhido']}")
-            print(f"Modo de Preparo: {' '.join(preparacao['modo_preparo'])}")
-            print(f"Curiosidade: {preparacao['curiosidade']}")
-    else:
-        print("Nenhum histórico de preparações de chá disponível.")
-
-# Mostrar o histórico de chá ao final da preparação atual
-mostrar_historico()
-
-
-
 # Recomendações de livros
 for recomendacao in recomendacoes_livros:
     cha_comb, livro = recomendacao.split(": ")
@@ -460,3 +432,19 @@ for recomendacao in recomendacoes_livros:
             break
 else:
     print("\nNenhuma recomendação de livro encontrada para esta combinação.")
+
+# Salvar a preparação atual no histórico
+preparacao_atual = {
+    "cha_escolhido": cha_escolhido,
+    "acomp_escolhido": acomp_escolhido,
+    "modo_preparo": cha,
+    "curiosidade": curiosidades_cha.get(cha_escolhido, "Nenhuma curiosidade disponível para este chá.")
+}
+salvar_historico(preparacao_atual)
+
+# Perguntar ao usuário se deseja ver o histórico de preparos
+ver_historico = input("Você deseja ver o histórico de preparos? (s/n): ").strip().lower()
+if ver_historico == "s":
+    mostrar_historico()
+else:
+    print("Encerrando o programa. Até a próxima!")
