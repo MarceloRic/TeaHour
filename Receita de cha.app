@@ -1,9 +1,9 @@
 import time as tm
 import os
 import json
-import threading
 import pyttsx3
 import speech_recognition as sr
+import pyaudio
 
 # Inicializar o mecanismo de conversão de texto em fala
 engine = pyttsx3.init()
