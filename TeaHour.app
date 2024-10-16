@@ -556,6 +556,8 @@ def salvar_comentarios(comentarios):
 # Carregar comentários existentes
 comentarios = carregar_comentarios()
 
+tm.sleep(3)
+
 # Adição de comentários
 speak("E ai gostou? Quer deixar um comentário?")
 print("Comentar? (s/n): ")
@@ -649,10 +651,69 @@ def calcular_pontuacao(cha, acomp):
     ("Chá de anis", "Panquecas"),
     ("Chá de cúrcuma", "Brioche")
     ]
+
+    recomendacoes_livros = {
+    "Chá preto e Bolachas de aveia: '1984' de George Orwell",
+    "Chá verde e Pão de mel: 'Orgulho e Preconceito' de Jane Austen",
+    "Chá de camomila e Biscoitos de gengibre: 'O Morro dos Ventos Uivantes' de Emily Brontë",
+    "Chá de hortelã e Muffins de mirtilo: 'Para Sempre Alice' de Lisa Genova",
+    "Chá de gengibre e Pão de queijo: 'A Revolução dos Bichos' de George Orwell",
+    "Chá de hibisco e Fatias de bolo de laranja: 'A Menina que Roubava Livros' de Markus Zusak",
+    "Chá de erva-doce e Scones com geleia: 'O Sol é para Todos' de Harper Lee",
+    "Chá de jasmim e Torradas com manteiga: 'Cem Anos de Solidão' de Gabriel García Márquez",
+    "Chá de limão e Biscoitos amanteigados: 'O Pequeno Príncipe' de Antoine de Saint-Exupéry",
+    "Chá de canela e Fatias de bolo (fubá, cenoura, limão): 'Alice no País das Maravilhas' de Lewis Carroll",
+    "Chá de frutas vermelhas e Tartes de frutas: 'Mulherzinhas' de Louisa May Alcott",
+    "Chá de maçã e canela e Fatias de pão integral com mel: 'Os Miseráveis' de Victor Hugo",
+    "Chá de rooibos e Croissants: 'O Alquimista' de Paulo Coelho",
+    "Chá de erva-mate e Cookies de chocolate: 'Dom Quixote' de Miguel de Cervantes",
+    "Chá de oolong e Pães de frutas: 'O Conde de Monte Cristo' de Alexandre Dumas",
+    "Chá de echinacea e Sanduíches de pepino: 'Moby Dick' de Herman Melville",
+    "Chá de hibisco e rosas e Bolinho de chuva: 'A Ilha do Tesouro' de Robert Louis Stevenson",
+    "Chá de capim-cidreira e Madeleines: 'Jane Eyre' de Charlotte Brontë",
+    "Chá branco e Brownies: 'Fahrenheit 451' de Ray Bradbury",
+    "Chá de maracujá e Pastéis de nata: 'O Grande Gatsby' de F. Scott Fitzgerald",
+    "Chá de menta e Torta de maçã: 'As Aventuras de Sherlock Holmes' de Arthur Conan Doyle",
+    "Chá de verbena e Fatias de pão de banana: 'O Jardim Secreto' de Frances Hodgson Burnett",
+    "Chá de lavanda e Torta de noz-pecã: 'Pride and Prejudice' de Jane Austen",
+    "Chá de limão e mel e Muffins de amora: 'A Pequena Sereia' de Hans Christian Andersen",
+    "Chá de maracujá e Pão de nozes: 'O Sol Também Se Levanta' de Ernest Hemingway",
+    "Chá chai e Sanduíches de salmão: 'As Brumas de Avalon' de Marion Zimmer Bradley",
+    "Chá matcha e Pãezinhos doces: 'Memórias de uma Gueixa' de Arthur Golden",
+    "Chá de romã e Donuts: 'O Apanhador no Campo de Centeio' de J.D. Salinger",
+    "Chá de cranberry e Barrinhas de cereais: 'A Lista de Schindler' de Thomas Keneally",
+    "Chá de dente-de-leão e Mini croissants recheados: 'O Senhor dos Anéis' de J.R.R. Tolkien",
+    "Chá de hortelã-pimenta e Churros: 'A Vida Secreta das Abelhas' de Sue Monk Kidd",
+    "Chá de ginseng e Waffles: 'Os Contos de Beedle, o Bardo' de J.K. Rowling",
+    "Chá de alcaçuz e Panquecas: 'A Roda do Tempo' de Robert Jordan",
+    "Chá de anis e Brioche: 'Os Três Mosqueteiros' de Alexandre Dumas",
+    "Chá de cúrcuma e Fatias de torta de limão: 'O Nome do Vento' de Patrick Rothfuss",
+    "Chá de cardamomo e Cookies de aveia e passas: 'O Castelo Animado' de Diana Wynne Jones",
+    "Chá de cravo e Cheesecake: 'O Perfume' de Patrick Süskind",
+    "Chá de boldo e Mousse de chocolate: 'O Silmarillion' de J.R.R. Tolkien",
+    "Chá de tília e Pão de abóbora: 'Contos de Fadas' de Hans Christian Andersen",
+    "Chá de erva-cidreira e Fatias de quiche: 'O Hobbit' de J.R.R. Tolkien",
+    "Chá de goiabeira e Torta de frango: 'A Sombra do Vento' de Carlos Ruiz Zafón",
+    "Chá de mangueira e Empanadas: 'A Fúria dos Reis' de George R.R. Martin",
+    "Chá de hortênsia e Palmiers: 'Os Pilares da Terra' de Ken Follett",
+    "Chá de lúpulo e Bolo de rolo: 'A Arte da Guerra' de Sun Tzu",
+    "Chá de moringa e Pão de leite: 'O Mundo de Sofia' de Jostein Gaarder",
+    "Chá de urtiga e Brioche com chocolate: 'A Revolução dos Bichos' de George Orwell",
+    "Chá de sálvia e Biscoitos de amêndoa: 'O Conde de Monte Cristo' de Alexandre Dumas",
+    "Chá de tomilho e Pães de batata: 'O Código Da Vinci' de Dan Brown",
+    "Chá de louro e Strudel de maçã: 'O Cemitério de Praga' de Umberto Eco",
+    "Chá de alecrim e Tartelette de frutas: 'Os Três Mosqueteiros' de Alexandre Dumas",
+    "Chá de eucalipto e Barrinhas de cereais: 'O Nome da Rosa' de Umberto Eco"
+    }
     
     pontos = 0
     if (cha, acomp) in combinacoes_secretas:
         pontos += 25
+        comb_str = f"{cha} e {acomp}"
+        if comb_str in recomendacoes_livros:
+            print(f"Recomendação de livro: {recomendacoes_livros[comb_str]}")
+            pontos += 25  # Pontos adicionais pelo livro relacionado
+    
     return pontos
 
 # Incrementar pontos por finalizar a rodada
@@ -675,7 +736,8 @@ print(f"Nível atual: {nivel}")
 # Verificar se algum chá secreto ou combinação secreta foi desbloqueado
 chas_desbloqueados_rodada, acomp_desbloqueados_rodada = verificar_desbloqueio(pontos)
 
-# Calcular pontos por combinação secreta
+
+# Calcular pontos por combinação secreta e livro relacionado
 pontos_adicionais = calcular_pontuacao(cha_escolhido, acomp_escolhido)
 pontos += pontos_adicionais
 
@@ -692,11 +754,11 @@ for cha in chas_desbloqueados_rodada:
 for acomp in acomp_desbloqueados_rodada:
     print(f"- Novo acompanhamento secreto desbloqueado: {acomp}")
 
-# Exibir status do bônus de combinação secreta
+# Exibir status do bônus de combinação secreta e livro relacionado
 if pontos_adicionais > 0:
     print(f"\nParabéns! Você acertou uma combinação secreta e ganhou {pontos_adicionais} pontos extras!")
 else:
-    print("\nNenhuma combinação secreta nesta rodada. Continue tentando!")
+    print("\nNenhuma combinação secreta ou livro relacionado acertado nesta rodada. Continue tentando!")
 
 # Exibir o status dos pontos
 print(f"Status atual dos pontos: {pontos}")
