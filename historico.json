@@ -1,0 +1,645 @@
+[
+    {
+        "cha_escolhido": "Ch\u00e1 de eucalipto",
+        "acomp_escolhido": "P\u00e3o de queijo",
+        "modo_preparo": [
+            "Temperatura escolhida: 55 graus.",
+            "1 - Tudo bem, ch\u00e1 gelado!",
+            "2 - Ent\u00e3o melhor num copo? Tudo bem.",
+            "3 - Jogamos no copo ent\u00e3o, n\u00e9? Sem problemas, usando Ch\u00e1 de eucalipto.",
+            "Fervendo por 9 minutinhos...",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "5 - Bem mexidinho! "
+        ],
+        "curiosidade": "O ch\u00e1 de eucalipto \u00e9 conhecido por suas propriedades respirat\u00f3rias."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de anis",
+        "acomp_escolhido": "Muffins de mirtilo",
+        "modo_preparo": [
+            "Temperatura escolhida: 44 graus.",
+            "1 - Ch\u00e1 Quentinho",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de anis...",
+            "Fervendo por 5 minutinhos...",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "5 - Bem mexidinho! "
+        ],
+        "curiosidade": "O ch\u00e1 de anis tem um sabor doce e pode ajudar na digest\u00e3o."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de gengibre",
+        "acomp_escolhido": "Biscoitos de gengibre",
+        "modo_preparo": [
+            "Temperatura escolhida: 66 graus.",
+            "1 - Ch\u00e1 Quentinho",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de gengibre...",
+            "Fervendo por 5 minutinhos...",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "5 - Bem mexidinho! "
+        ],
+        "curiosidade": "O ch\u00e1 de gengibre \u00e9 conhecido por suas propriedades anti-inflamat\u00f3rias e ajuda no combate a n\u00e1useas."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de hortel\u00e3",
+        "acomp_escolhido": "P\u00e3es de frutas",
+        "modo_preparo": [
+            "Temperatura escolhida: 44 graus.",
+            "1 - Ch\u00e1 Quentinho",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de hortel\u00e3...",
+            "Fervendo por 7 minutinhos...",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "5 - Bem mexidinho! "
+        ],
+        "curiosidade": "O ch\u00e1 de hortel\u00e3 pode ajudar na digest\u00e3o e aliviar dores de est\u00f4mago."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de gengibre",
+        "acomp_escolhido": "Fatias de bolo de laranja",
+        "modo_preparo": [
+            "Temperatura escolhida: 6 graus.",
+            "1 - Ch\u00e1 Quentinho",
+            "2 - Ent\u00e3o melhor num copo? Tudo bem.",
+            "3 - Jogamos no copo ent\u00e3o, n\u00e9? Sem problemas, usando Ch\u00e1 de gengibre.",
+            "Fervendo por 6 minutinhos...",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "5 - Beleza, ent\u00e3o deixa assim."
+        ],
+        "curiosidade": "O ch\u00e1 de gengibre \u00e9 conhecido por suas propriedades anti-inflamat\u00f3rias e ajuda no combate a n\u00e1useas."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de alca\u00e7uz",
+        "acomp_escolhido": "Muffins de mirtilo",
+        "modo_preparo": [
+            "Temperatura escolhida: 7 graus.",
+            "1 - Ch\u00e1 Quentinho",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "3 - Jogamos no copo ent\u00e3o, n\u00e9? Sem problemas, usando Ch\u00e1 de alca\u00e7uz.",
+            "Fervendo por 7 minutinhos...",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "5 - Bem mexidinho! "
+        ],
+        "curiosidade": "O ch\u00e1 de alca\u00e7uz pode ajudar a aliviar problemas respirat\u00f3rios."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de verbena",
+        "acomp_escolhido": "Bolinho de chuva",
+        "modo_preparo": [
+            "Temperatura escolhida: 44 graus.",
+            "1 - Ch\u00e1 Quentinho",
+            "2 - Ent\u00e3o melhor num copo? Tudo bem.",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de verbena...",
+            "Fervendo por 9 minutinhos...",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "5 - Bem mexidinho! "
+        ],
+        "curiosidade": "O ch\u00e1 de verbena \u00e9 usado para aliviar a tens\u00e3o e ajudar no sono."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de gengibre",
+        "acomp_escolhido": "Panquecas",
+        "modo_preparo": [
+            "Temperatura escolhida: 8 graus.",
+            "1 - Ch\u00e1 Quentinho",
+            "2 - Ent\u00e3o melhor num copo? Tudo bem.",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de gengibre...",
+            "Fervendo por 7 minutinhos...",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "5 - Bem mexidinho! "
+        ],
+        "curiosidade": "O ch\u00e1 de gengibre \u00e9 conhecido por suas propriedades anti-inflamat\u00f3rias e ajuda no combate a n\u00e1useas."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de erva-mate",
+        "acomp_escolhido": "P\u00e3o de queijo",
+        "modo_preparo": [
+            "Temperatura escolhida: 5 graus.",
+            "1 - Ch\u00e1 Quentinho",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de erva-mate...",
+            "Fervendo por 8 minutinhos...",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "5 - Beleza, ent\u00e3o deixa assim."
+        ],
+        "curiosidade": "O ch\u00e1 de erva-mate \u00e9 um estimulante natural e \u00e9 muito popular na Am\u00e9rica do Sul."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de c\u00farcuma",
+        "acomp_escolhido": "Muffins de mirtilo",
+        "modo_preparo": [
+            "Temperatura escolhida: 6 graus.",
+            "1 - Ch\u00e1 Quentinho",
+            "2 - Ent\u00e3o melhor num copo? Tudo bem.",
+            "3 - Jogamos no copo ent\u00e3o, n\u00e9? Sem problemas, usando Ch\u00e1 de c\u00farcuma.",
+            "Fervendo por 8 minutinhos...",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "5 - Bem mexidinho! "
+        ],
+        "curiosidade": "O ch\u00e1 de c\u00farcuma tem propriedades anti-inflamat\u00f3rias."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de camomila",
+        "acomp_escolhido": "P\u00e3o de mel",
+        "modo_preparo": [
+            "Temperatura escolhida: 2 graus.",
+            "1 - Ch\u00e1 Quentinho",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de camomila...",
+            "Fervendo por 2 minutinhos...",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "5 - Bem mexidinho! "
+        ],
+        "curiosidade": "O ch\u00e1 de camomila \u00e9 famoso por suas propriedades calmantes e pode ajudar a melhorar o sono."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de camomila",
+        "acomp_escolhido": "Muffins de mirtilo",
+        "modo_preparo": [
+            "Temperatura escolhida: 3 graus.",
+            "1 - Ch\u00e1 Quentinho",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de camomila...",
+            "Fervendo por 3 minutinhos...",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "5 - Bem mexidinho! "
+        ],
+        "curiosidade": "O ch\u00e1 de camomila \u00e9 famoso por suas propriedades calmantes e pode ajudar a melhorar o sono."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de gengibre",
+        "acomp_escolhido": "Scones com geleia",
+        "modo_preparo": [
+            "Temperatura escolhida: 4 graus.",
+            "1 - Ch\u00e1 Quentinho",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de gengibre...",
+            "Fervendo por 4 minutinhos...",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "5 - Bem mexidinho! "
+        ],
+        "curiosidade": "O ch\u00e1 de gengibre \u00e9 conhecido por suas propriedades anti-inflamat\u00f3rias e ajuda no combate a n\u00e1useas."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de gengibre",
+        "acomp_escolhido": "Biscoitos de gengibre",
+        "modo_preparo": [
+            "Temperatura escolhida: 34 graus.",
+            "1 - Ch\u00e1 Quentinho",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de gengibre...",
+            "Fervendo por 33 minutinhos...",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "5 - Bem mexidinho! "
+        ],
+        "curiosidade": "O ch\u00e1 de gengibre \u00e9 conhecido por suas propriedades anti-inflamat\u00f3rias e ajuda no combate a n\u00e1useas."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de cravo",
+        "acomp_escolhido": "P\u00e3o de leite",
+        "modo_preparo": [
+            "Temperatura escolhida: 5 graus.",
+            "--------------------",
+            "1 - Ch\u00e1 Quentinho",
+            "--------------------",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "--------------------",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de cravo...",
+            "--------------------",
+            "Fervendo por 6 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Bem mexidinho! ",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de cravo \u00e9 conhecido por suas propriedades antimicrobianas."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de gengibre",
+        "acomp_escolhido": "Muffins de mirtilo",
+        "modo_preparo": [
+            "Temperatura escolhida: 7 graus.",
+            "--------------------",
+            "1 - Ch\u00e1 Quentinho",
+            "--------------------",
+            "2 - Ent\u00e3o melhor num copo? Tudo bem.",
+            "--------------------",
+            "3 - Jogamos no copo ent\u00e3o, n\u00e9? Sem problemas, usando Ch\u00e1 de gengibre.",
+            "--------------------",
+            "Fervendo por 7 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Bem mexidinho! ",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de gengibre \u00e9 conhecido por suas propriedades anti-inflamat\u00f3rias e ajuda no combate a n\u00e1useas."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de hortel\u00e3",
+        "acomp_escolhido": "Bolo de rolo",
+        "modo_preparo": [
+            "Temperatura escolhida: 7 graus.",
+            "--------------------",
+            "1 - Ch\u00e1 Quentinho",
+            "--------------------",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "--------------------",
+            "3 - Jogamos no copo ent\u00e3o, n\u00e9? Sem problemas, usando Ch\u00e1 de hortel\u00e3.",
+            "--------------------",
+            "Fervendo por 7 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Bem mexidinho! ",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de hortel\u00e3 pode ajudar na digest\u00e3o e aliviar dores de est\u00f4mago."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de c\u00farcuma",
+        "acomp_escolhido": "P\u00e3o de queijo",
+        "modo_preparo": [
+            "Temperatura escolhida: 6 graus.",
+            "--------------------",
+            "1 - Ch\u00e1 Quentinho",
+            "--------------------",
+            "2 - Ent\u00e3o melhor num copo? Tudo bem.",
+            "--------------------",
+            "3 - Jogamos no copo ent\u00e3o, n\u00e9? Sem problemas, usando Ch\u00e1 de c\u00farcuma.",
+            "--------------------",
+            "Fervendo por 8 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Bem mexidinho! ",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de c\u00farcuma tem propriedades anti-inflamat\u00f3rias."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de l\u00fapulo",
+        "acomp_escolhido": "Scones com geleia",
+        "modo_preparo": [
+            "Temperatura escolhida: 4 graus.",
+            "--------------------",
+            "1 - Tudo bem, ch\u00e1 gelado!",
+            "--------------------",
+            "2 - Ent\u00e3o melhor num copo? Tudo bem.",
+            "--------------------",
+            "3 - Jogamos no copo ent\u00e3o, n\u00e9? Sem problemas, usando Ch\u00e1 de l\u00fapulo.",
+            "--------------------",
+            "Fervendo por 9 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Bem mexidinho! ",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de l\u00fapulo \u00e9 usado para tratar ins\u00f4nia e ansiedade."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de gengibre",
+        "acomp_escolhido": "P\u00e3o de queijo",
+        "modo_preparo": [
+            "Temperatura escolhida: 9 graus.",
+            "--------------------",
+            "1 - Tudo bem, ch\u00e1 gelado!",
+            "--------------------",
+            "2 - Ent\u00e3o melhor num copo? Tudo bem.",
+            "--------------------",
+            "3 - Jogamos no copo ent\u00e3o, n\u00e9? Sem problemas, usando Ch\u00e1 de gengibre.",
+            "--------------------",
+            "Fervendo por 9 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Beleza, ent\u00e3o deixa assim.",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de gengibre \u00e9 conhecido por suas propriedades anti-inflamat\u00f3rias e ajuda no combate a n\u00e1useas."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de alca\u00e7uz",
+        "acomp_escolhido": "Biscoitos de gengibre",
+        "modo_preparo": [
+            "Temperatura escolhida: 5 graus.",
+            "--------------------",
+            "1 - Tudo bem, ch\u00e1 gelado!",
+            "--------------------",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "--------------------",
+            "3 - Jogamos no copo ent\u00e3o, n\u00e9? Sem problemas, usando Ch\u00e1 de alca\u00e7uz.",
+            "--------------------",
+            "Fervendo por 7 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Beleza, ent\u00e3o deixa assim.",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de alca\u00e7uz pode ajudar a aliviar problemas respirat\u00f3rios."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de gengibre",
+        "acomp_escolhido": "Muffins de mirtilo",
+        "modo_preparo": [
+            "Temperatura escolhida: 5 graus.",
+            "--------------------",
+            "1 - Tudo bem, ch\u00e1 gelado!",
+            "--------------------",
+            "2 - Ent\u00e3o melhor num copo? Tudo bem.",
+            "--------------------",
+            "3 - Jogamos no copo ent\u00e3o, n\u00e9? Sem problemas, usando Ch\u00e1 de gengibre.",
+            "--------------------",
+            "Fervendo por 6 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Bem mexidinho! ",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de gengibre \u00e9 conhecido por suas propriedades anti-inflamat\u00f3rias e ajuda no combate a n\u00e1useas."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de hortel\u00e3",
+        "acomp_escolhido": "P\u00e3o de queijo",
+        "modo_preparo": [
+            "Temperatura escolhida: 8 graus.",
+            "--------------------",
+            "1 - Tudo bem, ch\u00e1 gelado!",
+            "--------------------",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "--------------------",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de hortel\u00e3...",
+            "--------------------",
+            "Fervendo por 7 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Bem mexidinho! ",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de hortel\u00e3 pode ajudar na digest\u00e3o e aliviar dores de est\u00f4mago."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de camomila",
+        "acomp_escolhido": "Fatias de bolo de laranja",
+        "modo_preparo": [
+            "Temperatura escolhida: 5 graus.",
+            "--------------------",
+            "1 - Ch\u00e1 Quentinho",
+            "--------------------",
+            "2 - Ent\u00e3o melhor num copo? Tudo bem.",
+            "--------------------",
+            "3 - Jogamos no copo ent\u00e3o, n\u00e9? Sem problemas, usando Ch\u00e1 de camomila.",
+            "--------------------",
+            "Fervendo por 6 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Beleza, ent\u00e3o deixa assim.",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de camomila \u00e9 famoso por suas propriedades calmantes e pode ajudar a melhorar o sono."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de hortel\u00e3",
+        "acomp_escolhido": "Torradas com manteiga",
+        "modo_preparo": [
+            "Temperatura escolhida: 9 graus.",
+            "--------------------",
+            "1 - Tudo bem, ch\u00e1 gelado!",
+            "--------------------",
+            "2 - Ent\u00e3o melhor num copo? Tudo bem.",
+            "--------------------",
+            "3 - Jogamos no copo ent\u00e3o, n\u00e9? Sem problemas, usando Ch\u00e1 de hortel\u00e3.",
+            "--------------------",
+            "Fervendo por s minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Beleza, ent\u00e3o deixa assim.",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de hortel\u00e3 pode ajudar na digest\u00e3o e aliviar dores de est\u00f4mago."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de hibisco",
+        "acomp_escolhido": "Muffins de mirtilo",
+        "modo_preparo": [
+            "Temperatura escolhida: 4 graus.",
+            "--------------------",
+            "1 - Ch\u00e1 Quentinho",
+            "--------------------",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "--------------------",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de hibisco...",
+            "--------------------",
+            "Fervendo por 9 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Beleza, ent\u00e3o deixa assim.",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de hibisco \u00e9 rico em vitamina C e pode ajudar a reduzir a press\u00e3o arterial."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de gengibre",
+        "acomp_escolhido": "Muffins de mirtilo",
+        "modo_preparo": [
+            "Temperatura escolhida: 8 graus.",
+            "--------------------",
+            "1 - Tudo bem, ch\u00e1 gelado!",
+            "--------------------",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "--------------------",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de gengibre...",
+            "--------------------",
+            "Fervendo por 6 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Bem mexidinho! ",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de gengibre \u00e9 conhecido por suas propriedades anti-inflamat\u00f3rias e ajuda no combate a n\u00e1useas."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de gengibre",
+        "acomp_escolhido": "Muffins de mirtilo",
+        "modo_preparo": [
+            "Temperatura escolhida: 9 graus.",
+            "--------------------",
+            "1 - Tudo bem, ch\u00e1 gelado!",
+            "--------------------",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "--------------------",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de gengibre...",
+            "--------------------",
+            "Fervendo por 7 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Bem mexidinho! ",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de gengibre \u00e9 conhecido por suas propriedades anti-inflamat\u00f3rias e ajuda no combate a n\u00e1useas."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de hibisco",
+        "acomp_escolhido": "P\u00e3o de queijo",
+        "modo_preparo": [
+            "Temperatura escolhida: 9 graus.",
+            "--------------------",
+            "1 - Tudo bem, ch\u00e1 gelado!",
+            "--------------------",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "--------------------",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de hibisco...",
+            "--------------------",
+            "Fervendo por 9 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Beleza, ent\u00e3o deixa assim.",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de hibisco \u00e9 rico em vitamina C e pode ajudar a reduzir a press\u00e3o arterial."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de hortel\u00e3",
+        "acomp_escolhido": "P\u00e3o de queijo",
+        "modo_preparo": [
+            "Temperatura escolhida: 7 graus.",
+            "--------------------",
+            "1 - Tudo bem, ch\u00e1 gelado!",
+            "--------------------",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "--------------------",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de hortel\u00e3...",
+            "--------------------",
+            "Fervendo por 6 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Bem mexidinho! ",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de hortel\u00e3 pode ajudar na digest\u00e3o e aliviar dores de est\u00f4mago."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de gengibre",
+        "acomp_escolhido": "Fatias de bolo de laranja",
+        "modo_preparo": "Ch\u00e1 de eucalipto",
+        "curiosidade": "O ch\u00e1 de gengibre \u00e9 conhecido por suas propriedades anti-inflamat\u00f3rias e ajuda no combate a n\u00e1useas."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de gengibre",
+        "acomp_escolhido": "P\u00e3o de mel",
+        "modo_preparo": [
+            "Temperatura escolhida: 67 graus.",
+            "--------------------",
+            "1 - Ch\u00e1 Quentinho",
+            "--------------------",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "--------------------",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de gengibre...",
+            "--------------------",
+            "Fervendo por 7 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Bem mexidinho! ",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de gengibre \u00e9 conhecido por suas propriedades anti-inflamat\u00f3rias e ajuda no combate a n\u00e1useas."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de anis",
+        "acomp_escolhido": "Bolo de rolo",
+        "modo_preparo": [
+            "Temperatura escolhida: 6 graus.",
+            "--------------------",
+            "1 - Ch\u00e1 Quentinho",
+            "--------------------",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "--------------------",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de anis...",
+            "--------------------",
+            "Fervendo por 6 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Bem mexidinho! ",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de anis tem um sabor doce e pode ajudar na digest\u00e3o."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de camomila",
+        "acomp_escolhido": "P\u00e3o de queijo",
+        "modo_preparo": [
+            "Temperatura escolhida: 8 graus.",
+            "--------------------",
+            "1 - Ch\u00e1 Quentinho",
+            "--------------------",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "--------------------",
+            "3 - Jogamos no copo ent\u00e3o, n\u00e9? Sem problemas, usando Ch\u00e1 de camomila.",
+            "--------------------",
+            "Fervendo por 8 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Beleza, ent\u00e3o deixa assim.",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de camomila \u00e9 famoso por suas propriedades calmantes e pode ajudar a melhorar o sono."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de gengibre",
+        "acomp_escolhido": "P\u00e3o de queijo",
+        "modo_preparo": [
+            "Temperatura escolhida: 8 graus.",
+            "--------------------",
+            "1 - Ch\u00e1 Quentinho",
+            "--------------------",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "--------------------",
+            "3 - Agora jogamos a \u00e1gua na x\u00edcara com Ch\u00e1 de gengibre...",
+            "--------------------",
+            "Fervendo por 8 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Bem mexidinho! ",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de gengibre \u00e9 conhecido por suas propriedades anti-inflamat\u00f3rias e ajuda no combate a n\u00e1useas."
+    },
+    {
+        "cha_escolhido": "Ch\u00e1 de hortel\u00e3",
+        "acomp_escolhido": "Muffins de mirtilo",
+        "modo_preparo": [
+            "Temperatura escolhida: 8 graus.",
+            "--------------------",
+            "1 - Ch\u00e1 Quentinho",
+            "--------------------",
+            "2 - Colocando o ch\u00e1 na x\u00edcara.",
+            "--------------------",
+            "3 - Jogamos no copo ent\u00e3o, n\u00e9? Sem problemas, usando Ch\u00e1 de hortel\u00e3.",
+            "--------------------",
+            "Fervendo por 8 minutinhos...",
+            "--------------------",
+            "4 - Estilo ingl\u00eas, adorei!",
+            "--------------------",
+            "5 - Bem mexidinho! ",
+            "--------------------"
+        ],
+        "curiosidade": "O ch\u00e1 de hortel\u00e3 pode ajudar na digest\u00e3o e aliviar dores de est\u00f4mago."
+    }
+]

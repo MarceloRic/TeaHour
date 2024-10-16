@@ -5,6 +5,26 @@ import pyttsx3
 import speech_recognition as sr
 import pyaudio
 
+# Função para carregar XP e nível de um arquivo JSON
+def carregar_xp_nivel():
+    if os.path.exists("xp_nivel.json"):
+        with open("xp_nivel.json", "r") as file:
+            try:
+                return json.load(file)
+            except json.JSONDecodeError:
+                return {"xp": 0, "nivel": 1}
+    return {"xp": 0, "nivel": 1}
+
+# Função para salvar XP e nível em um arquivo JSON
+def salvar_xp_nivel(xp, nivel):
+    dados_xp_nivel = {
+        "xp": xp,
+        "nivel": nivel
+    }
+    with open("xp_nivel.json", "w") as file:
+        json.dump(dados_xp_nivel, file)
+
+
 # Inicializar o mecanismo de conversão de texto em fala
 engine = pyttsx3.init()
 
@@ -38,28 +58,15 @@ def listen():
         except sr.RequestError:
             print("Could not request results; check your network connection.")
             return ""
-        
+
 # Funções para carregar e salvar o histórico de chá
 historico = []
 
 def salvar_historico(preparacao):
     historico.append(preparacao)
 
-def mostrar_historico():
-    if historico:
-        print("\nHistórico de Preparações de Chá:")
-        for i, preparacao in enumerate(historico, 1):
-            print(f"\nPreparação {i}:")
-            print(f"Chá Escolhido: {preparacao['cha_escolhido']}")
-            print(f"Acompanhamento Escolhido: {preparacao['acomp_escolhido']}")
-            print(f"Modo de Preparo: {' '.join(preparacao['modo_preparo'])}")
-            print(f"Curiosidade: {preparacao['curiosidade']}")
-    else:
-        print("Nenhum histórico de preparações de chá disponível.")
 
-
-
-# Lista ampliada de tipos de chá
+# Listas
 tipos_de_cha = [
     "Chá preto",
     "Chá verde",
@@ -113,7 +120,6 @@ tipos_de_cha = [
     "Chá de eucalipto"
 ]
 
-# Lista ampliada de acompanhamentos
 acompanhamentos_cha = [
     "Bolachas de aveia",
     "Pão de mel",
@@ -164,10 +170,8 @@ acompanhamentos_cha = [
     "Biscoitos de amêndoa",
     "Pães de batata",
     "Strudel de maçã",
-    "Tartelette de frutas"
-]
+    "Tartelette de frutas"]
 
-# Lista de recomendações de livros
 recomendacoes_livros = [
     "Chá preto e Bolachas de aveia: '1984' de George Orwell",
     "Chá verde e Pão de mel: 'Orgulho e Preconceito' de Jane Austen",
@@ -220,7 +224,7 @@ recomendacoes_livros = [
     "Chá de louro e Strudel de maçã: 'O Cemitério de Praga' de Umberto Eco",
     "Chá de alecrim e Tartelette de frutas: 'Os Três Mosqueteiros' de Alexandre Dumas",
     "Chá de eucalipto e Barrinhas de cereais: 'O Nome da Rosa' de Umberto Eco"
-]
+    ]
 
 curiosidades_cha = {
     "Chá preto": "O chá preto é totalmente oxidado, o que lhe dá uma cor escura e sabor robusto.",
@@ -273,8 +277,135 @@ curiosidades_cha = {
     "Chá de louro": "O chá de louro pode ajudar na digestão.",
     "Chá de alecrim": "O chá de alecrim é energizante e pode ajudar na circulação.",
     "Chá de eucalipto": "O chá de eucalipto é conhecido por suas propriedades respiratórias."
-}
+    }
 
+# Listas Secretas com Valores de Desbloqueio
+chas_secretos_valores = [
+    ("Chá de laranja e maracujá", 50),
+    ("Chá de morango e kiwi", 60),
+    ("Chá de mirtilo e açaí", 70),
+    ("Chá de pêssego e manga", 80),
+    ("Chá de lichia e limão", 90),
+    ("Chá de coco e baunilha", 100),
+    ("Chá de goiaba e hibisco", 110),
+    ("Chá de abacaxi e hortelã", 120),
+    ("Chá de cereja e romã", 130),
+    ("Chá de framboesa e lavanda", 140),
+    ("Chá de capim-santo e gengibre", 150),
+    ("Chá de amora e hibisco", 160),
+    ("Chá de framboesa e limão", 170),
+    ("Chá de laranja e canela", 180),
+    ("Chá de pêra e especiarias", 190)
+    ]
+
+acompanhamentos_secretos_valores = [
+("Trufas de chocolate", 50),
+    ("Macarons", 60),
+    ("Pão de mel com nozes", 70),
+    ("Biscoitos de canela e gengibre", 80),
+    ("Brownies de caramelo salgado", 90),
+    ("Fatias de torta de frutas vermelhas", 100),
+    ("Mini pavlovas", 110),
+    ("Muffins de banana e aveia", 120),
+    ("Cupcakes de baunilha", 130),
+    ("Pão de ló de amêndoas", 140),
+    ("Tartes de limão", 150),
+    ("Bolinhos de chuva recheados", 160),
+    ("Biscoitos de amêndoa com mel", 170),
+    ("Pastéis de nata com frutas", 180),
+    ("Mini cheesecakes", 190)
+    ]
+
+# Listas de Chás e Acompanhamentos Secretos Desbloqueados
+chas_secretos_desbloqueados = []
+acompanhamentos_secretos_desbloqueados = []
+pontos = 0
+
+# Função para carregar os pontos de um arquivo JSON
+def carregar_pontos():
+    if os.path.exists("pontos.json"):
+        with open("pontos.json", "r") as file:
+            return json.load(file)
+    return 0
+
+# Função para salvar os pontos em um arquivo JSON
+def salvar_pontos(pontos):
+    with open("pontos.json", "w") as file:
+        json.dump(pontos, file)
+
+# Função para carregar as conquistas secretas de um arquivo JSON
+def carregar_conquistas_secretas():
+    if os.path.exists("conquistas_secretas.json"):
+        with open("conquistas_secretas.json", "r") as file:
+            try:
+                return json.load(file)
+            except json.JSONDecodeError:
+                return {"chas_secretos_desbloqueados": [], "acompanhamentos_secretos_desbloqueados": []}
+    return {"chas_secretos_desbloqueados": [], "acompanhamentos_secretos_desbloqueados": []}
+
+# Carregar XP e nível existentes
+xp_nivel = carregar_xp_nivel()
+xp = xp_nivel["xp"]
+nivel = xp_nivel["nivel"]
+
+# Função para atualizar XP e nível
+def atualizar_xp_nivel(xp_atual, xp_ganho, nivel_atual):
+    xp_atual += xp_ganho
+    if xp_atual >= nivel_atual * 100:
+        nivel_atual += 1
+        xp_atual = 0  # Reset XP ao subir de nível
+        print(f"Parabéns! Você subiu para o nível {nivel_atual}!")
+    return xp_atual, nivel_atual
+
+
+# Função para salvar as conquistas secretas em um arquivo JSON
+def salvar_conquistas_secretas(chas_secretos_desbloqueados, acompanhamentos_secretos_desbloqueados):
+    conquistas_secretas = {
+        "chas_secretos_desbloqueados": chas_secretos_desbloqueados,
+        "acompanhamentos_secretos_desbloqueados": acompanhamentos_secretos_desbloqueados
+    }
+    with open("conquistas_secretas.json", "w") as file:
+        json.dump(conquistas_secretas, file)
+
+# Função para exibir listas secretas
+def exibir_listas_secretas():
+    print("\nChás secretos desbloqueados:")
+    if chas_secretos_desbloqueados:
+        for cha in chas_secretos_desbloqueados:
+            print(f"- {cha}")
+    else:
+        print("Nenhum chá secreto desbloqueado.")
+
+    print("\nAcompanhamentos secretos desbloqueados:")
+    if acompanhamentos_secretos_desbloqueados:
+        for acomp in acompanhamentos_secretos_desbloqueados:
+            print(f"- {acomp}")
+    else:
+        print("Nenhum acompanhamento secreto desbloqueado.")
+
+# Carregar conquistas secretas existentes
+conquistas_secretas = carregar_conquistas_secretas()
+chas_secretos_desbloqueados = conquistas_secretas["chas_secretos_desbloqueados"]
+acompanhamentos_secretos_desbloqueados = conquistas_secretas["acompanhamentos_secretos_desbloqueados"]
+
+# Carregar pontos existentes
+pontos = carregar_pontos()
+
+# Perguntar ao usuário se deseja acessar os itens secretos
+def escolher_lista():
+    escolha = input("Você deseja acessar as listas secretas? (s/n): ").strip().lower()
+    if escolha == "s":
+        return True
+    return False
+
+# Escolher e exibir listas secretas
+if escolher_lista():
+    print("\nAcessando listas secretas...")
+    exibir_listas_secretas()
+    tipos_de_cha = chas_secretos_desbloqueados
+    acompanhamentos_cha = acompanhamentos_secretos_desbloqueados
+else:
+    print("\nUsando listas normais...")
 
 # Apresentação dos tipos de chá
 print("Tipos de chá disponíveis:")
@@ -282,13 +413,13 @@ for i, cha in enumerate(tipos_de_cha):
     print(f"{i + 1} - {cha}")
 
 # Escolha do usuário para o tipo de chá
-speak("Escolha o número do chá que deseja.")
+speak("Olá! o que vai ser hoje?")
 escolha_1 = int(input("Escolha o número do chá que deseja: ")) - 1
 
 # Validação da escolha do tipo de chá
 if 0 <= escolha_1 < len(tipos_de_cha):
     cha_escolhido = tipos_de_cha[escolha_1]
-    speak(f"Você escolheu: {cha_escolhido}")
+    speak(f"{cha_escolhido} que ótima escolha!")
     print(f"\nVocê escolheu: {cha_escolhido}")
 else:
     speak("Escolha inválida, tente novamente.")
@@ -301,36 +432,37 @@ for i, item in enumerate(acompanhamentos_cha):
     print(f"{i + 1} - {item}")
 
 # Escolha do usuário para o acompanhamento
-speak("Escolha o número do acompanhamento que deseja.")
+speak("De acompanhmento vamos de que?")
 escolha_2 = int(input("Escolha o número do acompanhamento que deseja: ")) - 1
 
 # Validação da escolha do acompanhamento
 if 0 <= escolha_2 < len(acompanhamentos_cha):
     acomp_escolhido = acompanhamentos_cha[escolha_2]
-    speak(f"Você escolheu: {acomp_escolhido}")
+    speak(f"Que boa escolha: {acomp_escolhido} vai ficar incrível!")
     print(f"\nSeu acompanhamento: {acomp_escolhido}")
 else:
     speak("Escolha inválida, sem acompanhamentos.")
     print("Escolha inválida, sem acompanhamentos.")
     exit()
 
-
-
 # Receita de chá, mini app
 cha = []
 print(f"\nVamos fazer esse {cha_escolhido}...")
 
 ask_0 = str(input("\nQual temperatura você deseja? ")).lower()
-ask_1 = str(input("1 - Você quer ferver o chá? (s/n): ")).lower()
-ask_e1 = str(input("Vamos ferver por quanto tempo? ")).lower()
-ask_2 = str(input("2 - Vamos colocar o chá na xícara? (s/n): ")).lower()
-ask_3 = str(input("3 - Agora vamos despejar a água na xícara? (s/n): ")).lower()
+ask_1 = str(input("1 - Você quer ferver o chá ou deixar em infusão? (f/i): ")).lower()
+ask_e1 = str(input("E por quanto tempo? ")).lower()
+ask_2 = str(input("2 - Vamos colocar o chá na xícara ou na caneca? (x/cn): ")).lower()
+ask_3 = str(input("3 - Agora vamos despejar a água na xícara/caneca ou servir gelado? (q/g): ")).lower()
 
-print("-- Agora espere uns segundinhos...")
+print("-- Agora espere um pouquinho...")
+
 tm.sleep(4)
 
-ask_5 = str(input("4 - Quer adicionar leite ou açúcar? (l/a), (tudo): ")).lower()
-ask_6 = str(input("5 - Agora vamos mexer isso? (s/n): ")).lower()
+ask_5 = str(input("4 - Quer adicionar leite, açúcar, mel ou tudo? (l/a/m/t): ")).lower()
+ask_6 = str(input("5 - Agora vamos mexer isso com uma colher de chá, canudo ou palito? (c/ca/p): ")).lower()
+ask_7 = str(input("6 - Vamos adicionar um toque especial? leite, hortelã, gengibre (l/h/g/nada): ")).lower()
+ask_8 = str(input("7 - Quer um acompanhamento musical? (s/n): ")).lower()
 
 # Interação com o usuário
 if ask_0:
@@ -338,47 +470,76 @@ if ask_0:
 else:
     print("Nenhuma temperatura específica...")
 
-if ask_1 == "s":
-    cha.append("1 - Chá Quentinho")
+if ask_1 == "f":
+    cha.append("1 - Chá Quentinho fervido.")
+elif ask_1 == "i":
+    cha.append("1 - Chá preparado por infusão.")
 else:
-    cha.append("1 - Tudo bem, chá gelado!")
-
-if ask_2 == "s":
-    cha.append("2 - Colocando o chá na xícara.")
-else:
-    cha.append("2 - Então melhor num copo? Tudo bem.")
-
-if ask_3 == "s":
-    cha.append(f"3 - Agora jogamos a água na xícara com {cha_escolhido}...")
-else:
-    cha.append(f"3 - Jogamos no copo então, né? Sem problemas, usando {cha_escolhido}.")
+    cha.append("1 - Método de preparo não escolhido corretamente.")
 
 if ask_e1:
-    cha.append(f"Fervendo por {ask_e1} minutinhos...")
+    cha.append(f"Tempo de preparo: {ask_e1} minutinhos.")
     tm.sleep(3)
 else:
     print("Nenhum tempo específico...")
+
+if ask_2 == "x":
+    cha.append("2 - Colocando o chá na xícara.")
+elif ask_2 == "cn":
+    cha.append("2 - Colocando o chá na caneca.")
+else:
+    cha.append("2 - Recipiente de servir não escolhido corretamente.")
+
+if ask_3 == "q":
+    cha.append(f"3 - Agora jogamos a água na xícara com {cha_escolhido} quente.")
+elif ask_3 == "g":
+    cha.append(f"3 - Servindo o {cha_escolhido} gelado.")
+else:
+    cha.append(f"3 - Opção quente ou gelado não escolhida corretamente.")
 
 if ask_5 == "l":
     cha.append("4 - Estilo inglês, adorei!")
 elif ask_5 == "a":
     cha.append("4 - Bem docinho, que delícia!")
-elif ask_5 == "tudo":
+elif ask_5 == "m":
+    cha.append("4 - Doce natural com mel!")
+elif ask_5 == "t":
     cha.append("4 - Chá completinho? Pode deixar!")
 else:
     cha.append("4 - Escolha inválida, sem adições.")
 
-if ask_6 == "s":
-    cha.append("5 - Bem mexidinho! ")
-    tm.sleep(2)
+if ask_6 == "c":
+    cha.append("5 - Bem mexidinho com a colher!")
+elif ask_6 == "ca":
+    cha.append("5 - Mexendo com um canudo!")
+elif ask_6 == "p":
+    cha.append("5 - Um palito para mexer, porque não?")
 else:
-    cha.append("5 - Beleza, então deixa assim.")
+    cha.append("5 - Escolha inválida, sem mexer.")
+
+if ask_7 == "l":
+    cha.append("6 - Adicionando um toque de limão!")
+elif ask_7 == "h":
+    cha.append("6 - Refrescando com hortelã!")
+elif ask_7 == "g":
+    cha.append("6 - Um toque de gengibre picante!")
+elif ask_7 == "nada":
+    cha.append("6 - Mantendo simples, sem adições especiais.")
+else:
+    cha.append("6 - Opção de toque especial não escolhida corretamente.")
+
+if ask_8 == "s":
+    cha.append("7 - Aproveitando uma trilha sonora relaxante enquanto prepara o chá!")
+elif ask_8 == "n":
+    cha.append("7 - Preparando o chá em silêncio.")
+else:
+    cha.append("7 - Opção musical não escolhida corretamente.")
 
 print(f"\nSeu {cha_escolhido} está prontinho, e seu acompanhamento: ({acomp_escolhido}), está servido.")
 curiosidade = curiosidades_cha.get(cha_escolhido, "Nenhuma curiosidade disponível para este chá.")
 print(f"Curiosidade: {curiosidade}")
-print(f"\nModo de preparo do seu chá:\n\n{cha}\n\nEspero que goste! Bom apetite.")
 
+print(f"\nModo de preparo do seu chá:\n\n{cha}\n\nEspero que goste! Bom apetite.")
 
 # Função para carregar os comentários de um arquivo
 def carregar_comentarios():
@@ -392,16 +553,13 @@ def salvar_comentarios(comentarios):
     with open("comentarios.json", "w") as file:
         json.dump(comentarios, file)
 
-tm.sleep(8)
-
 # Carregar comentários existentes
 comentarios = carregar_comentarios()
 
 # Adição de comentários
-speak("Você gostaria de deixar um comentário sobre seu chá?")
-print("Você gostaria de deixar um comentário sobre seu chá? (s/n): ")
+speak("E ai gostou? Quer deixar um comentário?")
+print("Comentar? (s/n): ")
 comentar = input().lower()
-
 if comentar == 's':
     speak("Digite seu comentário.")
     print("Digite seu comentário: ")
@@ -414,12 +572,13 @@ if comentar == 's':
 salvar_comentarios(comentarios)
 
 # Mostrar todos os comentários
-if comentarios:
+if comentarios == True:
     speak("Aqui estão os comentários dos usuários:")
     print("\nComentários dos usuários:")
     for comentario in comentarios:
         print(f"- {comentario}")
-
+else:
+    speak("Muito obrigado!")
 
 # Recomendações de livros
 for recomendacao in recomendacoes_livros:
@@ -433,18 +592,125 @@ for recomendacao in recomendacoes_livros:
 else:
     print("\nNenhuma recomendação de livro encontrada para esta combinação.")
 
-# Salvar a preparação atual no histórico
-preparacao_atual = {
-    "cha_escolhido": cha_escolhido,
-    "acomp_escolhido": acomp_escolhido,
-    "modo_preparo": cha,
-    "curiosidade": curiosidades_cha.get(cha_escolhido, "Nenhuma curiosidade disponível para este chá.")
-}
-salvar_historico(preparacao_atual)
+## Função para atualizar pontos
+def atualizar_pontos(pontos_atuais, pontos_rodada=10):
+    return pontos_atuais + pontos_rodada
 
-# Perguntar ao usuário se deseja ver o histórico de preparos
-ver_historico = input("Você deseja ver o histórico de preparos? (s/n): ").strip().lower()
-if ver_historico == "s":
-    mostrar_historico()
+# Função para verificar desbloqueio de chás e acompanhamentos secretos
+def verificar_desbloqueio(pontos):
+    global chas_secretos_desbloqueados, acompanhamentos_secretos_desbloqueados
+    chas_desbloqueados_rodada = []
+    acomp_desbloqueados_rodada = []
+    for cha, valor in chas_secretos_valores:
+        if pontos >= valor and cha not in chas_secretos_desbloqueados:
+            chas_secretos_desbloqueados.append(cha)
+            chas_desbloqueados_rodada.append(cha)
+    for acomp, valor in acompanhamentos_secretos_valores:
+        if pontos >= valor and acomp not in acompanhamentos_secretos_desbloqueados:
+            acompanhamentos_secretos_desbloqueados.append(acomp)
+            acomp_desbloqueados_rodada.append(acomp)
+    return chas_desbloqueados_rodada, acomp_desbloqueados_rodada
+
+# Função para calcular a pontuação com base nas combinações secretas
+def calcular_pontuacao(cha, acomp):
+    combinacoes_secretas = [
+    ("Chá preto", "Bolachas de aveia"),
+    ("Chá verde", "Pão de mel"),
+    ("Chá de camomila", "Biscoitos de gengibre"),
+    ("Chá de hortelã", "Muffins de mirtilo"),
+    ("Chá de gengibre", "Pão de queijo"),
+    ("Chá de hibisco", "Fatias de bolo de laranja"),
+    ("Chá de erva-doce", "Scones com geleia"),
+    ("Chá de jasmim", "Torradas com manteiga"),
+    ("Chá de limão", "Biscoitos amanteigados"),
+    ("Chá de canela", "Fatias de bolo (fubá, cenoura, limão)"),
+    ("Chá de frutas vermelhas", "Tartes de frutas"),
+    ("Chá de maçã e canela", "Fatias de pão integral com mel"),
+    ("Chá de rooibos", "Croissants"),
+    ("Chá de erva-mate", "Cookies de chocolate"),
+    ("Chá de oolong", "Pães de frutas"),
+    ("Chá de echinacea", "Sanduíches de pepino"),
+    ("Chá de hibisco e rosas", "Bolinho de chuva"),
+    ("Chá de capim-cidreira", "Madeleines"),
+    ("Chá branco", "Brownies"),
+    ("Chá de maracujá", "Pastéis de nata"),
+    ("Chá de menta", "Torta de maçã"),
+    ("Chá de verbena", "Fatias de pão de banana"),
+    ("Chá de lavanda", "Torta de noz-pecã"),
+    ("Chá de limão e mel", "Muffins de amora"),
+    ("Chá chai", "Pão de nozes"),
+    ("Chá matcha", "Sanduíches de salmão"),
+    ("Chá de romã", "Pãezinhos doces"),
+    ("Chá de cranberry", "Donuts"),
+    ("Chá de dente-de-leão", "Barrinhas de cereais"),
+    ("Chá de hortelã-pimenta", "Mini croissants recheados"),
+    ("Chá de ginseng", "Churros"),
+    ("Chá de alcaçuz", "Waffles"),
+    ("Chá de anis", "Panquecas"),
+    ("Chá de cúrcuma", "Brioche")
+    ]
+    
+    pontos = 0
+    if (cha, acomp) in combinacoes_secretas:
+        pontos += 25
+    return pontos
+
+# Incrementar pontos por finalizar a rodada
+pontos = atualizar_pontos(pontos)
+
+# Quantidade de XP ganho por chá finalizado
+xp_ganho = 20
+
+# Atualizar XP e nível
+xp, nivel = atualizar_xp_nivel(xp, xp_ganho, nivel)
+
+# Salvar XP e nível atualizados
+salvar_xp_nivel(xp, nivel)
+
+# Exibir status do XP e nível
+print(f"XP atual: {xp}")
+print(f"Nível atual: {nivel}")
+
+
+# Verificar se algum chá secreto ou combinação secreta foi desbloqueado
+chas_desbloqueados_rodada, acomp_desbloqueados_rodada = verificar_desbloqueio(pontos)
+
+# Calcular pontos por combinação secreta
+pontos_adicionais = calcular_pontuacao(cha_escolhido, acomp_escolhido)
+pontos += pontos_adicionais
+
+# Salvar pontos atualizados
+salvar_pontos(pontos)
+
+# Salvar conquistas secretas atualizadas
+salvar_conquistas_secretas(chas_secretos_desbloqueados, acompanhamentos_secretos_desbloqueados)
+
+# Exibir conquistas da rodada atual
+print("\nConquistas da rodada atual:")
+for cha in chas_desbloqueados_rodada:
+    print(f"- Novo chá secreto desbloqueado: {cha}")
+for acomp in acomp_desbloqueados_rodada:
+    print(f"- Novo acompanhamento secreto desbloqueado: {acomp}")
+
+# Exibir status do bônus de combinação secreta
+if pontos_adicionais > 0:
+    print(f"\nParabéns! Você acertou uma combinação secreta e ganhou {pontos_adicionais} pontos extras!")
 else:
-    print("Encerrando o programa. Até a próxima!")
+    print("\nNenhuma combinação secreta nesta rodada. Continue tentando!")
+
+# Exibir o status dos pontos
+print(f"Status atual dos pontos: {pontos}")
+
+def mostrar_historico():
+    if historico:
+        print("\nHistórico de Preparações de Chá:")
+        for i, preparacao in enumerate(historico, 1):
+            print(f"\nPreparação {i}:")
+            print(f"Chá Escolhido: {preparacao['cha_escolhido']}")
+            print(f"Acompanhamento Escolhido: {preparacao['acomp_escolhido']}")
+            print(f"Modo de Preparo: {' '.join(preparacao['modo_preparo'])}")
+            print(f"Curiosidade: {preparacao['curiosidade']}")
+            print("-" * 30)  # Separador para cada preparo
+    else:
+        print("Nenhum histórico de preparações de chá disponível.")
+
