@@ -5,6 +5,24 @@ import pyttsx3
 import speech_recognition as sr
 import pyaudio
 
+
+
+# Função para carregar o histórico de chá de um arquivo JSON
+def carregar_historico():
+    if os.path.exists("historico.json"):
+        with open("historico.json", "r") as file:
+            try:
+                return json.load(file)
+            except json.JSONDecodeError:
+                return []
+    return []
+
+# Função para salvar o histórico de chá em um arquivo JSON
+def salvar_historico(historico):
+    with open("historico.json", "w") as file:
+        json.dump(historico, file)
+
+
 # Função para carregar XP e nível de um arquivo JSON
 def carregar_xp_nivel():
     if os.path.exists("xp_nivel.json"):
@@ -59,11 +77,8 @@ def listen():
             print("Could not request results; check your network connection.")
             return ""
 
-# Funções para carregar e salvar o histórico de chá
-historico = []
-
-def salvar_historico(preparacao):
-    historico.append(preparacao)
+# Carregar histórico existente
+historico = carregar_historico()
 
 
 # Listas
@@ -760,8 +775,22 @@ if pontos_adicionais > 0:
 else:
     print("\nNenhuma combinação secreta ou livro relacionado acertado nesta rodada. Continue tentando!")
 
+# Salvar a preparação atual no histórico
+preparacao_atual = {
+    "cha_escolhido": cha_escolhido,
+    "acomp_escolhido": acomp_escolhido,
+    "modo_preparo": cha,
+    "curiosidade": curiosidades_cha.get(cha_escolhido, "Nenhuma curiosidade disponível para este chá.")
+}
+
+historico.append(preparacao_atual)
+salvar_historico(historico)
+
+
 # Exibir o status dos pontos
 print(f"Status atual dos pontos: {pontos}")
+
+
 
 def mostrar_historico():
     if historico:
@@ -776,3 +805,9 @@ def mostrar_historico():
     else:
         print("Nenhum histórico de preparações de chá disponível.")
 
+# Perguntar ao usuário se deseja ver o histórico de preparos
+ver_historico = input("Você deseja ver o histórico de preparos? (s/n): ").strip().lower()
+if ver_historico == "s":
+    mostrar_historico()
+else:
+    print("Encerrando o programa. Até a próxima!")
